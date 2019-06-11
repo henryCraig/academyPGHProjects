@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html> -->
+<!--  For some reason when I addd doctype html, it starts looking really ugly, whereas when I have it turned off the gradient works fine-->
+<html lang = "en">
+
+<html>
+
+<style>
+  #backgroundBody {
+      background:
+          linear-gradient(red, transparent),
+          linear-gradient(to top left, lime, transparent),
+          linear-gradient(to top right, blue, transparent);
+      background-blend-mode: screen;
+
+      /* column-count: 3; */
+  }
+
+  #stickyNote {
+    background-color: #fff ;
+    padding: 10px ;
+    margin: 10px;
+    width: 200px;
+    
+  }
+
+</style>
+
+
+<body id = "backgroundBody">
+
+</body>
+
+  <div id = "stickyNote" >Milk</div>
+  <div id = "stickyNote">Bread</div>
+
+</html>

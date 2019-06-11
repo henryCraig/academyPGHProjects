@@ -1,0 +1,149 @@
+<!-- Group project -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I'm a calculator</title>
+
+    <style>
+        :root{
+            --buttoncolor: lightgreen;
+            --highlightbuttoncolor: white;
+            --bordercolor: green;
+            --operatorcolor: pink;
+            --operatorbordercolor: magenta;
+        }
+
+        button{
+            font-size: 20pt;
+            height: 2.5em;
+            width: 2em;
+            border-radius: .350em;
+            border: solid var(--bordercolor);
+            background: var(--buttoncolor);
+            margin: .25em .1em .25em .1em;
+        }
+        button:hover{
+            background: var(--highlightbuttoncolor);
+        }
+        textarea{
+            resize: none;
+        }
+        #display{
+            font-size: 20pt;
+            margin: 1em .1em .5em .1em;
+            border: 2px solid;
+            width: 7.9em;
+            height: 1.25em;
+            border-radius: .35em;
+            text-align: right;
+            padding-right: .5em;
+            padding-left: .5em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+        .operator{
+            background-color: var(--operatorcolor);
+            border-color: var(--operatorbordercolor);
+        }
+        @media only screen and (max-width: 263px) {
+        body{
+            display: none;
+            } }
+        @media only screen and (max-height: 432px) {
+            #calc{
+            display:none;
+            } }
+    </style>
+
+</head>
+
+<body>
+    <div id="calc">
+    <div id="display">
+    </div>
+        <div>
+        <button onClick = "insertAndShow(1)">1</button>
+        <button onClick = "insertAndShow(2)">2</button>
+        <button onClick = "insertAndShow(3)">3</button>
+        <button class="operator" onClick = "insertAndShow('/')">/</button>
+        </div>
+        <div>
+        <button onClick = "insertAndShow(4)">4</button>
+        <button onClick = "insertAndShow(5)">5</button>
+        <button onClick = "insertAndShow(6)">6</button>
+        <button class="operator" onClick = "insertAndShow('*')">*</button>
+    </div>
+        <div>
+        <button onClick = "insertAndShow(7)">7</button>
+        <button onClick = "insertAndShow(8)">8</button>
+        <button onClick = "insertAndShow(9)">9</button>
+        <button class="operator" onClick = "insertAndShow('-')">-</button>
+        </div>
+        <div>
+        <button class="operator" onClick = "clearThing()">C</button>
+        <button onClick = "insertAndShow(0)">0</button>
+        <button onClick = "equate()" class="operator">=</button>
+        <button class="operator" onClick = "insertAndShow('+')">+</button>
+        </div>
+</div>
+
+
+
+</body>
+
+<script>
+        var operatorPhrase = ""
+
+        function insertNum(givenNum)
+        {
+            operatorPhrase = operatorPhrase.concat(givenNum);
+        }
+
+        function printThing()
+        {
+            document.getElementById('display').innerHTML = operatorPhrase;
+        }
+
+        function insertAndShow(givenNum) {
+          insertNum(givenNum)
+          printThing()
+        }
+
+
+        function clearThing()
+        {
+            operatorPhrase = ""
+            document.getElementById('display').innerHTML = "";
+        }
+
+        function equate(){
+
+          if (operatorPhrase[1] == "+"){
+            // var num1;
+            // var num2;
+            // for(var i = 0; i < operatorPhrase.length; i++){
+            //   num1 =
+            // }
+            document.getElementById('display').innerHTML = parseInt(operatorPhrase[0]) + parseInt(operatorPhrase[2]);
+          }
+
+          if (operatorPhrase[1] == "-"){
+            document.getElementById('display').innerHTML = parseInt(operatorPhrase[0]) - parseInt(operatorPhrase[2]);
+          }
+
+          if (operatorPhrase[1] == "*"){
+            document.getElementById('display').innerHTML = parseInt(operatorPhrase[0]) * parseInt(operatorPhrase[2]);
+          }
+
+          if (operatorPhrase[1] == "/"){
+            document.getElementById('display').innerHTML = parseInt(operatorPhrase[0]) / parseInt(operatorPhrase[2]);
+          }
+
+        }
+      </script>
+
+</html>

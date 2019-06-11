@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+  <body>
+
+    <button onClick = "clearThing()">C</button>
+
+    <button onClick = "insertNum(0)">0</button>
+    <button onClick = "insertNum(1)">1</button>
+    <button onClick = "insertNum(2)">2</button>
+    <button onClick = "insertNum(3)">3</button>
+    <button onClick = "insertNum(4)">4</button>
+    <button onClick = "insertNum(5)">5</button>
+    <button onClick = "insertNum(6)">6</button>
+    <button onClick = "insertNum(7)">7</button>
+    <button onClick = "insertNum(8)">8</button>
+    <button onClick = "insertNum(9)">9</button>
+
+    <button onClick = "insertNum('+')">+</button>
+    <button onClick = "insertNum('-')">-</button>
+    <button onClick = "insertNum('*')">*</button>
+    <button onClick = "insertNum('/')">/</button>
+
+    <button onClick = "equate()">=</button>
+
+    <button onClick = "printThing()">print</button>
+  </body>
+
+
+  <script>
+    var operatorPhrase = ""
+
+    function insertNum(givenNum)
+    {
+        operatorPhrase = operatorPhrase.concat(givenNum);
+    }
+
+    function printThing()
+    {
+        console.log(operatorPhrase)
+    }
+
+    function clearThing()
+    {
+        operatorPhrase = ""
+    }
+
+    function equate(){
+
+      if (operatorPhrase[1] == "+"){
+        // var num1;
+        // var num2;
+        // for(var i = 0; i < operatorPhrase.length; i++){
+        //   num1 =
+        // }
+        console.log(parseInt(operatorPhrase[0]) + parseInt(operatorPhrase[2]))
+
+      }
+
+      if (operatorPhrase[1] == "-"){
+        console.log(parseInt(operatorPhrase[0]) - parseInt(operatorPhrase[2]))
+      }
+
+      if (operatorPhrase[1] == "*"){
+        console.log(parseInt(operatorPhrase[0]) * parseInt(operatorPhrase[2]))
+      }
+
+      if (operatorPhrase[1] == "/"){
+        console.log(parseInt(operatorPhrase[0]) / parseInt(operatorPhrase[2]))
+      }
+
+    }
+  </script>
+
+
+</html>

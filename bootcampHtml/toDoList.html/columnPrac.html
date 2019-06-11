@@ -1,0 +1,59 @@
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+
+<title>Todo List</title>
+
+<style>
+  #backgroundBody {
+      background:
+          linear-gradient(red, transparent),
+          linear-gradient(to top left, lime, transparent),
+          linear-gradient(to top right, blue, transparent);
+      background-blend-mode: screen;
+  }
+
+  .stickyNote {
+    background-color: #fff ;
+    padding: 10px ;
+    margin: 10px;
+    width: 200px;
+    font-family: 'Noto Sans HK', sans-serif;
+
+  }
+
+
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+
+
+<body id = "backgroundBody">
+
+  <div class="row">
+    <div class="column">
+      <div class = "stickyNote">test?</div>
+    </div>
+
+    <div class="column">
+      <div class = "stickyNote">test2</div>
+    </div>
+
+    <div class="column">
+      <div class = "stickyNote">3rd column?  What happens when I try to exceed the column is kind of what im interested in here you know what I mean?</div>
+
+    </div>
+
+    <div class="column">
+      <div class = "stickyNote">test 4</div>
+    </div>
+  </div>
+</body>
