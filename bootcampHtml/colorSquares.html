@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <body>
+
+    <style>
+      div {
+        background: "blue";
+        width: 5vw;
+        height: 5vw;
+    }
+    </style>
+
+    <script>
+    function changeColor(idName){
+      r = Math.floor(Math.random() * 255);
+      g = Math.floor(Math.random() * 255);
+      b = Math.floor(Math.random() * 255);
+      document.getElementById(idName).style.background = 'rgb('+r+' ,'+g+' ,'+b+')';
+    }
+
+    </script>
+
+
+
+
+    
+
+    <div id = "square1" onmouseover = "changeColor('square1')"></div>
+    <div id = "square2" onmouseover = "changeColor('square2')"></div>
+    <div id = "square3" onmouseover = "changeColor('square3')"></div>
+    <div id = "square4" onmouseover = "changeColor('square4')"></div>
+    <div id = "square5" onmouseover = "changeColor('square5')"></div>
+    <div id = "square6" onmouseover = "changeColor('square6')"></div>
+    <div id = "square7" onmouseover = "changeColor('square7')"></div>
+    <div id = "square8" onmouseover = "changeColor('square8')"></div>
+    <div id = "square9" onmouseover = "changeColor('square9')"></div>
+    <div id = "square10" onmouseover = "changeColor('square10')"></div>
+
+
+
+
+
+  </body>
+</html>
